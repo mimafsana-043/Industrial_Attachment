@@ -1,3 +1,7 @@
+import ChatPage from './components/ChatPage'
+
+function App() {
+  return <ChatPage />
 import { useState } from 'react'
 import axios from 'axios'
 import SearchBar from './components/SearchBar'
