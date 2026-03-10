@@ -2,6 +2,9 @@
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   color: #14332f;
   background: radial-gradient(circle at top, #edf8f4 0%, #e4f1eb 40%, #d8e9e2 100%);
+  line-height: 1.5;
+  color: #112d2c;
+  background: radial-gradient(circle at top, #eef8f4, #e0f0ea 35%, #d8ebe5 100%);
 }
 
 * {
@@ -225,4 +228,150 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.search-panel {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: #124942;
+}
+
+.subtitle {
+  margin: 0.5rem 0 1.5rem;
+  color: #2d6158;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  width: min(640px, 100%);
+  border: 1px solid #b6d8cd;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  background-color: #f9fffc;
+}
+
+.search-input:focus {
+  outline: 3px solid #b4efe0;
+  border-color: #6aa996;
+}
+
+.search-button {
+  border: none;
+  background: linear-gradient(135deg, #1f7d68, #2d9b82);
+  color: white;
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.loading-wrapper {
+  display: grid;
+  place-items: center;
+  margin: 1.5rem 0;
+  color: #25584f;
+}
+
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #b6d8cd;
+  border-top-color: #1f7d68;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  text-align: center;
+  color: #b62445;
+  font-weight: 600;
+}
+
+.results-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.result-card {
+  background-color: #ffffffd8;
+  border: 1px solid #d2ebe3;
+  border-radius: 18px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: 0 10px 25px -18px rgba(18, 73, 66, 0.65);
+}
+
+.result-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.surah-title {
+  margin: 0;
+  color: #184c44;
+}
+
+.similarity-badge {
+  background: #e2f8f2;
+  color: #0e6b58;
+  border: 1px solid #aee3d5;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.verse-meta {
+  margin: 0.45rem 0;
+  color: #2f5d54;
+  font-weight: 600;
+}
+
+.verse-text {
+  margin: 0.45rem 0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  text-align: right;
+  direction: rtl;
+}
+
+.verse-translation {
+  margin: 0.45rem 0 0;
+  color: #234741;
 }
